@@ -1,0 +1,48 @@
+version: "1"
+
+services:
+
+  prometheus:
+    image: prom/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+      - '--storage.tsdb.retention=30d'
+    restart: unless-stopped
+    volumes:
+      - ./prometheus:/etc/prometheus/
+    ports:
+      - 9090:9090
+
+#  alertmanager:
+#    image: prom/alertmanager
+#    container_name: alertmanager
+#    volumes: 
+#      - ./alertmanager/:/etc/alertmanager/
+#    command:
+#      - '--config.file=/etc/alertmanager/config.yml'
+#      - '--storage.path=/alertmanager'
+#    restart: unless-stopped
+#    expose:
+#      - 9093
+
+  pushgate:
+    image: prom/pushgateway
+    command:
+      - '--web.enable-admin-api'
+    restart: unless-stopped
+    ports:
+      - 9091:9091
+  
+  grafana:
+    image: grafana/grafana
+#    volumes:
+#      - grafana_data:/var/lib/grafana
+#      - ./grafana/datasources:/etc/grafana/datasources
+#      - ./grafana/dashboards:/etc/grafana/dashboards
+#      - ./grafana/setup.sh:/setup.sh
+    restart: unless-stopped
+    ports:
+      - 3000:3000

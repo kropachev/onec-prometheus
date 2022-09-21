@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.9.1">
+	<ConfigVersions>
+		<Metadata name="Catalog.Prometheus_НастройкаВыгрузки" id="d0944d3a-8e7c-48ca-9de3-4562b5680db4" configVersion="6606d2595b6a5754ce39dec683e4755820bbe0eb">
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.МетрикаИмя" id="079e3d1a-aaed-4af3-9ebe-2d7d95020000"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.ТЧЗначенияПараметров" id="14c9aef9-b714-42e7-97fe-54506e049633"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.TabularSection.РазмерыБакетов.Attribute.ЦелевоеЗначение" id="17d53413-2a23-4811-adc6-12d37a4fd529"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.МетрикаКомментарий" id="42a29d04-cb96-4e66-9c47-b9312a6a3842"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.ИдентификаторРегламентногоЗадания" id="74d219dc-6f6c-494c-9704-45d6d20bd79c"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.ВыполнятьПоРасписанию" id="8af2e518-224a-4b46-9edd-2bb7e1dff5d8"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.TabularSection.РазмерыБакетов" id="8d863306-b26e-4c94-9080-8263379c3ece"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.ТекстЗапроса" id="8f2187d4-cbaf-4fc2-943d-377ecab535fc"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.СпособСбора" id="918f4642-e501-462c-b54d-b03453b280a1"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.ТипМетрики" id="d5a481b6-9be0-4390-8414-837cf1fd0afd"/>
+			<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Attribute.ТЧПоляМетрик" id="f6a3fff3-40a4-458f-81c5-9663e631420c"/>
+		</Metadata>
+		<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Form.ФормаСписка" id="fd39f588-53df-4eea-8b4e-cf2254e5fae4" configVersion="fef742851c23c9633b5dffa7f708ee88f6d2ee15"/>
+		<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Form.ФормаСписка.Form" id="fd39f588-53df-4eea-8b4e-cf2254e5fae4.0" configVersion="21142b2f982110ea3f4476aad348572c672af4aa"/>
+		<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Form.ФормаЭлемента" id="1b6335a4-5bd7-40db-b5bc-1ae820971a07" configVersion="cd2c40238be2257bc0cb3a4689565fb5a4291d5f"/>
+		<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.Form.ФормаЭлемента.Form" id="1b6335a4-5bd7-40db-b5bc-1ae820971a07.0" configVersion="d5ec905376fcb496d07d1d91fd5ac035fc8262da"/>
+		<Metadata name="Catalog.Prometheus_НастройкаВыгрузки.ManagerModule" id="d0944d3a-8e7c-48ca-9de3-4562b5680db4.3" configVersion="72607b936c810c938de4f2e99586fe149b28890a"/>
+		<Metadata name="Catalog.КлючевыеОперации" id="0ca5937f-633f-4a9a-9f91-df38614887b7" configVersion="ca2c989153830d2c1acd77178b18fc376ccad8e1"/>
+		<Metadata name="CommonModule.Prometheus_Сервер" id="7db545a0-a2ba-444f-8b1a-4fa4cd1b8b99" configVersion="d2e2f17e9dc16638f1fcd0e2743a548a64857bcf"/>
+		<Metadata name="CommonModule.Prometheus_Сервер.Module" id="7db545a0-a2ba-444f-8b1a-4fa4cd1b8b99.0" configVersion="1b31d753f41cdfa9954dd15e87dfb67b55bbf423"/>
+		<Metadata name="CommonModule.ДополнительныеОтчетыИОбработки" id="5ecf8dc4-3afe-4202-ae37-1c99a747c930" configVersion="df3da30e82f480cb31fea5d9c0c2c3c2b8b11db0"/>
+		<Metadata name="CommonModule.ДополнительныеОтчетыИОбработки.Module" id="5ecf8dc4-3afe-4202-ae37-1c99a747c930.0" configVersion="8a01a58eb9ae10b9bf11b4e00a57de08555c3b0d"/>
+		<Metadata name="CommonPicture.Prometheus" id="15861b68-684f-48e1-a5ad-f0b95ac0a6ee" configVersion="49244db2388e0a855913556ea2df57eb0fc88366"/>
+		<Metadata name="CommonPicture.Prometheus.Picture" id="15861b68-684f-48e1-a5ad-f0b95ac0a6ee.0" configVersion="51c938046723ee732ddcdd13d5be37c8f9ca1ff7"/>
+		<Metadata name="Configuration.Prometheus" id="ef20d58c-2c9d-4a4f-beed-84743d236c61" configVersion="c7b960176b1ab9c6984fb21c1862b4ac21a1a93f"/>
+		<Metadata name="Constant.Prometheus_Pushgateway" id="ffbdd5a1-cfe8-4f41-b556-1a81adba3c30" configVersion="69846c58630cecbb1ee8e07bbdb13499912f3d11"/>
+		<Metadata name="Enum.Prometheus_СпособыСбораМерик" id="36ea7ac8-f208-4317-b800-86da0cfaa026" configVersion="daabfa2a2380a8efda2f68099a65455851915ad2">
+			<Metadata name="Enum.Prometheus_СпособыСбораМерик.EnumValue.ПроизвольныйКод" id="13a082cf-4040-456e-8185-2e92771e078c"/>
+			<Metadata name="Enum.Prometheus_СпособыСбораМерик.EnumValue.Запрос" id="4f1afec0-a477-47ee-9e3f-3080f69037d6"/>
+		</Metadata>
+		<Metadata name="Enum.Prometheus_ТипыМертик" id="9af75f63-be76-4585-9670-c6035e9778aa" configVersion="148a46ae0f81ccacb4ce65357f508465138879ff">
+			<Metadata name="Enum.Prometheus_ТипыМертик.EnumValue.Gauge" id="2adfbbb4-bc47-4080-814a-494375088b1f"/>
+			<Metadata name="Enum.Prometheus_ТипыМертик.EnumValue.Histogram" id="4c192108-9efd-43fe-8461-645f62a22832"/>
+			<Metadata name="Enum.Prometheus_ТипыМертик.EnumValue.Counter" id="6edfe7e2-e568-45cf-94ac-6daba693928f"/>
+			<Metadata name="Enum.Prometheus_ТипыМертик.EnumValue.Summary" id="f58f2750-2c98-452c-95d1-459b9d559e2b"/>
+		</Metadata>
+		<Metadata name="InformationRegister.Prometheus_ГраницыСбораМетрик" id="154e04fc-be59-4e99-ab63-423056a8e5eb" configVersion="37865fd31156e5c12e49ba380ef3b10b7ece6ae1">
+			<Metadata name="InformationRegister.Prometheus_ГраницыСбораМетрик.Resource.ДатаПоследнейВыгрузкиUTC" id="34e0d4a5-d0db-402a-ba27-1ea0e940fb7b"/>
+			<Metadata name="InformationRegister.Prometheus_ГраницыСбораМетрик.Dimension.НастройкаВыгрузки" id="4e4aaedc-6fbf-499b-929d-b9e8a51c421e"/>
+		</Metadata>
+		<Metadata name="Language.Русский" id="912d3a1c-026d-41c8-b5c3-b056670d411f" configVersion="6f46b76b06e07a1553c632f50b560cb5733f5317"/>
+		<Metadata name="Role.Prometheus_Администрирование" id="907420e5-55a9-42b0-8570-803427c9a709" configVersion="44ee9dd66bcc4b9ab1fd11d2cf9dee535b4e302b"/>
+		<Metadata name="Subsystem.Prometheus" id="1f1e5c41-a891-43ea-a099-f0899671f58b" configVersion="22e0062a8cf3ebc89b681d8f48b7fcb2e8f222a0"/>
+		<Metadata name="Subsystem.Prometheus.CommandInterface" id="1f1e5c41-a891-43ea-a099-f0899671f58b.1" configVersion="7884b89eedfe46ba3234f9315d34beb85f4a5753"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9.1">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтправитьМетрики" id="21">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтправитьМетрики</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОтправитьМетрикиРасширеннаяПодсказка" id="22"/>
+			</Button>
+			<Button name="ФормаЗаполнитьПример" id="114">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьПример</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаЗаполнитьПримерРасширеннаяПодсказка" id="115"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКодНаименование" id="19">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодНаименованиеРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<SkipOnInput>false</SkipOnInput>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="МетрикаИмя" id="13">
+			<DataPath>Объект.МетрикаИмя</DataPath>
+			<ContextMenu name="МетрикаИмяКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="МетрикаИмяРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="МетрикаКомментарий" id="16">
+			<DataPath>Объект.МетрикаКомментарий</DataPath>
+			<ContextMenu name="МетрикаКомментарийКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="МетрикаКомментарийРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ТипМетрики" id="10">
+			<DataPath>Объект.ТипМетрики</DataPath>
+			<ContextMenu name="ТипМетрикиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипМетрикиРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="ГруппаСборМетрик" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбор метрик</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка сбора метрик</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ExtendedTooltip name="ГруппаСборМетрикРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКомандСбораМетрик" id="34">
+					<ExtendedTooltip name="ГруппаКомандСбораМетрикРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<Button name="ПолучитьМетрики" id="36">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПолучитьМетрики</CommandName>
+							<ExtendedTooltip name="ПолучитьМетрикиРасширеннаяПодсказка" id="37"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<RadioButtonField name="СпособСбора" id="25">
+					<DataPath>Объект.СпособСбора</DataPath>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Запрос</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.Prometheus_СпособыСбораМерик.EnumValue.Запрос</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Произвольный код</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.Prometheus_СпособыСбораМерик.EnumValue.ПроизвольныйКод</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="СпособСбораКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СпособСбораРасширеннаяПодсказка" id="27"/>
+				</RadioButtonField>
+				<UsualGroup name="ГруппаСборИРезультат" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сбор и результат</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сбор и результат</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаСборИРезультатРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаТекстЗапросаИПараметры" id="65">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаТекстЗапросаИПараметрыРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаТекстЗапроса" id="67">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаТекстЗапросаРасширеннаяПодсказка" id="68"/>
+									<ChildItems>
+										<InputField name="ТекстЗапроса" id="7">
+											<DataPath>Объект.ТекстЗапроса</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="9"/>
+											<Events>
+												<Event name="OnChange">ТекстЗапросаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаПараметрыИПоляЗапроса" id="69">
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ThroughAlign>Use</ThroughAlign>
+											<ExtendedTooltip name="ГруппаПараметрыИПоляЗапросаРасширеннаяПодсказка" id="70"/>
+											<ChildItems>
+												<Table name="ЗначенияПараметров" id="71">
+													<Representation>List</Representation>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>ЗначенияПараметров</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ЗначенияПараметровКонтекстноеМеню" id="72"/>
+													<AutoCommandBar name="ЗначенияПараметровКоманднаяПанель" id="73"/>
+													<ExtendedTooltip name="ЗначенияПараметровРасширеннаяПодсказка" id="74"/>
+													<SearchStringAddition name="ЗначенияПараметровСтрокаПоиска" id="75">
+														<AdditionSource>
+															<Item>ЗначенияПараметров</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ЗначенияПараметровСтрокаПоискаКонтекстноеМеню" id="76"/>
+														<ExtendedTooltip name="ЗначенияПараметровСтрокаПоискаРасширеннаяПодсказка" id="77"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ЗначенияПараметровСостояниеПросмотра" id="78">
+														<AdditionSource>
+															<Item>ЗначенияПараметров</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ЗначенияПараметровСостояниеПросмотраКонтекстноеМеню" id="79"/>
+														<ExtendedTooltip name="ЗначенияПараметровСостояниеПросмотраРасширеннаяПодсказка" id="80"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ЗначенияПараметровУправлениеПоиском" id="81">
+														<AdditionSource>
+															<Item>ЗначенияПараметров</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ЗначенияПараметровУправлениеПоискомКонтекстноеМеню" id="82"/>
+														<ExtendedTooltip name="ЗначенияПараметровУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ЗначенияПараметровИмяПараметра" id="84">
+															<DataPath>ЗначенияПараметров.ИмяПараметра</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>20</Width>
+															<ContextMenu name="ЗначенияПараметровИмяПараметраКонтекстноеМеню" id="85"/>
+															<ExtendedTooltip name="ЗначенияПараметровИмяПараметраРасширеннаяПодсказка" id="86"/>
+														</InputField>
+														<InputField name="ЗначенияПараметровЗначениеПараметра" id="87">
+															<DataPath>ЗначенияПараметров.ЗначениеПараметра</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<OpenButton>true</OpenButton>
+															<ContextMenu name="ЗначенияПараметровЗначениеПараметраКонтекстноеМеню" id="88"/>
+															<ExtendedTooltip name="ЗначенияПараметровЗначениеПараметраРасширеннаяПодсказка" id="89"/>
+															<Events>
+																<Event name="Opening">ЗначенияПараметровЗначениеПараметраОткрытие</Event>
+															</Events>
+														</InputField>
+														<CheckBoxField name="ЗначенияПараметровВычисляемый" id="106">
+															<DataPath>ЗначенияПараметров.Вычисляемый</DataPath>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Значение параметра будет вычислено. В тексте необходимо указать присвоение значения переменнй ЗначениеПараметра.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЗначенияПараметровВычисляемыйКонтекстноеМеню" id="107"/>
+															<ExtendedTooltip name="ЗначенияПараметровВычисляемыйРасширеннаяПодсказка" id="108"/>
+														</CheckBoxField>
+													</ChildItems>
+												</Table>
+												<Table name="РазмерыБакетов" id="116">
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>Объект.РазмерыБакетов</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="РазмерыБакетовКонтекстноеМеню" id="117"/>
+													<AutoCommandBar name="РазмерыБакетовКоманднаяПанель" id="118"/>
+													<ExtendedTooltip name="РазмерыБакетовРасширеннаяПодсказка" id="119"/>
+													<SearchStringAddition name="РазмерыБакетовСтрокаПоиска" id="120">
+														<AdditionSource>
+															<Item>РазмерыБакетов</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="РазмерыБакетовСтрокаПоискаКонтекстноеМеню" id="121"/>
+														<ExtendedTooltip name="РазмерыБакетовСтрокаПоискаРасширеннаяПодсказка" id="122"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="РазмерыБакетовСостояниеПросмотра" id="123">
+														<AdditionSource>
+															<Item>РазмерыБакетов</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="РазмерыБакетовСостояниеПросмотраКонтекстноеМеню" id="124"/>
+														<ExtendedTooltip name="РазмерыБакетовСостояниеПросмотраРасширеннаяПодсказка" id="125"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="РазмерыБакетовУправлениеПоиском" id="126">
+														<AdditionSource>
+															<Item>РазмерыБакетов</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="РазмерыБакетовУправлениеПоискомКонтекстноеМеню" id="127"/>
+														<ExtendedTooltip name="РазмерыБакетовУправлениеПоискомРасширеннаяПодсказка" id="128"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<LabelField name="РазмерыБакетовНомерСтроки" id="129">
+															<DataPath>Объект.РазмерыБакетов.LineNumber</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="РазмерыБакетовНомерСтрокиКонтекстноеМеню" id="130"/>
+															<ExtendedTooltip name="РазмерыБакетовНомерСтрокиРасширеннаяПодсказка" id="131"/>
+														</LabelField>
+														<InputField name="РазмерыБакетовЦелевоеЗначение" id="132">
+															<DataPath>Объект.РазмерыБакетов.ЦелевоеЗначение</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="РазмерыБакетовЦелевоеЗначениеКонтекстноеМеню" id="133"/>
+															<ExtendedTooltip name="РазмерыБакетовЦелевоеЗначениеРасширеннаяПодсказка" id="134"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<Table name="ПоляМетрик" id="90">
+													<Representation>List</Representation>
+													<Visible>false</Visible>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>ПоляМетрик</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ПоляМетрикКонтекстноеМеню" id="91"/>
+													<AutoCommandBar name="ПоляМетрикКоманднаяПанель" id="92"/>
+													<ExtendedTooltip name="ПоляМетрикРасширеннаяПодсказка" id="93"/>
+													<SearchStringAddition name="ПоляМетрикСтрокаПоиска" id="94">
+														<AdditionSource>
+															<Item>ПоляМетрик</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПоляМетрикСтрокаПоискаКонтекстноеМеню" id="95"/>
+														<ExtendedTooltip name="ПоляМетрикСтрокаПоискаРасширеннаяПодсказка" id="96"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ПоляМетрикСостояниеПросмотра" id="97">
+														<AdditionSource>
+															<Item>ПоляМетрик</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПоляМетрикСостояниеПросмотраКонтекстноеМеню" id="98"/>
+														<ExtendedTooltip name="ПоляМетрикСостояниеПросмотраРасширеннаяПодсказка" id="99"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ПоляМетрикУправлениеПоиском" id="100">
+														<AdditionSource>
+															<Item>ПоляМетрик</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ПоляМетрикУправлениеПоискомКонтекстноеМеню" id="101"/>
+														<ExtendedTooltip name="ПоляМетрикУправлениеПоискомРасширеннаяПодсказка" id="102"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ПоляМетрикИмяПоля" id="103">
+															<DataPath>ПоляМетрик.ИмяПоля</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ПоляМетрикИмяПоляКонтекстноеМеню" id="104"/>
+															<ExtendedTooltip name="ПоляМетрикИмяПоляРасширеннаяПодсказка" id="105"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРезультаты" id="54">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаРезультатыРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРезультатСбора" id="56">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаРезультатСбораРасширеннаяПодсказка" id="57"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияРезультатСбора" id="38">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Результат сбора</v8:content>
+												</v8:item>
+											</Title>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="ДекорацияРезультатСбораКонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="ДекорацияРезультатСбораРасширеннаяПодсказка" id="40"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаРезультатМетрика" id="58">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаРезультатМетрикаРасширеннаяПодсказка" id="59"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияРезультатМетрика" id="60">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Результат сформированной метрики</v8:content>
+												</v8:item>
+											</Title>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="ДекорацияРезультатМетрикаКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="ДекорацияРезультатМетрикаРасширеннаяПодсказка" id="62"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКонструкторМетрик" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа конструктор метрик</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа конструктор метрик</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонструкторМетрикРасширеннаяПодсказка" id="31"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРасписание" id="112">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРасписаниеРасширеннаяПодсказка" id="113"/>
+			<ChildItems>
+				<CheckBoxField name="ВыполнятьПоРасписанию" id="109">
+					<DataPath>Объект.ВыполнятьПоРасписанию</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыполнятьПоРасписаниюКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ВыполнятьПоРасписаниюРасширеннаяПодсказка" id="111"/>
+				</CheckBoxField>
+				<Button name="НастроитьРасписание" id="23">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.НастроитьРасписание</CommandName>
+					<ExtendedTooltip name="НастроитьРасписаниеРасширеннаяПодсказка" id="24"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Prometheus_НастройкаВыгрузки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РасписаниеРегламентногоЗадания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание регламентного задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЗначенияПараметров" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значения параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ИмяПараметра" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя параметра</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеПараметра" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение параметра</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Используется" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Используется</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Вычисляемый" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вычисляемый</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПоляМетрик" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поля метрик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяПоля" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗначенияПараметров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗначенияПараметров.Используется</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="false" strikeout="true" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОтправитьМетрики" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить метрики</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить метрики</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьМетрики</Action>
+		</Command>
+		<Command name="НастроитьРасписание" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьРасписание</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьМетрики" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить метрики</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить метрики</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьМетрики</Action>
+		</Command>
+		<Command name="ЗаполнитьПример" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить пример</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить пример</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПример</Action>
+		</Command>
+	</Commands>
+</Form>
